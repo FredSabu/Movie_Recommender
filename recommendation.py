@@ -35,7 +35,7 @@ class MovieRecommender:
         matched_id = self.movies[self.movies['title'] == matched_title]['movieId'].iloc[0]  # Get the corresponding movie ID
         return matched_id, matched_title
 
-    def find_similar_movies(self, movie_id, k=10, metric='cosine'):
+    def find_similar_movies(self, movie_id, k=8, metric='cosine'):
         matrix = self.matrix.T
         movie_ind = self.movie_mapper[movie_id]
         movie_vec = matrix[movie_ind]
