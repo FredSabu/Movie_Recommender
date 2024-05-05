@@ -7,12 +7,13 @@ import numpy as np
 
 
 # Load your dataset
-df = pd.read_csv('ml-25m/movies4.csv')
+df = pd.read_csv('/Users/Mathi/Desktop/movies4.csv')
 
 
 # Preprocess genres: Convert from string representation of list to actual list and explode
 df['genres'] = df['genres'].apply(ast.literal_eval)
 genres_exploded = df.explode('genres')
+
 
 # Generate Genre Popularity visualization
 genre_counts = genres_exploded['genres'].value_counts()
@@ -65,4 +66,15 @@ plt.xlabel('Year')
 plt.ylabel('Number of Movies')
 plt.legend(title='Genres', bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.xticks(rotation=45)
+plt.show()
+
+# LINE GRAPH instead of STACKED BAR CHART
+plt.figure(figsize=(15, 10))
+for genre in genres:
+    plt.plot(years, genre_year_counts[genre], label=genre, marker='o')
+plt.title('Distribution of Movie Counts Per Genre Over Years')
+plt.xlabel('Year')
+plt.ylabel('Number of Movies')
+plt.legend(title='Genres', bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.grid(True)
 plt.show()
