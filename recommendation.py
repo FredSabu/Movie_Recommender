@@ -34,7 +34,7 @@ class MovieRecommender:
         # extractOne returns a tuple (best_match, score)
         result = process.extractOne(title, all_titles, scorer=fuzz.QRatio)
 
-        if result and result[1] >= 80:  # Check if there is a result and the score is high enough
+        if result and result[1] >= 70:  # Check if there is a result and the score is high enough
             best_match = result[0]
             matched_id = self.movies[self.movies['title'] == best_match]['movieId'].iloc[0]
             return matched_id, best_match

@@ -7,8 +7,9 @@ import numpy as np
 
 
 # Load your dataset
-df = pd.read_csv('/Users/Mathi/Desktop/movies4.csv')
+df = pd.read_csv('ml-25m/movies4.csv')
 
+df = df[~df['genres'].apply(ast.literal_eval).apply(lambda x: '(no genres listed)' in x)]
 
 # Preprocess genres: Convert from string representation of list to actual list and explode
 df['genres'] = df['genres'].apply(ast.literal_eval)
