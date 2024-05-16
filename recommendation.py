@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
-from fuzzywuzzy import process, fuzz
+from rapidfuzz import process, fuzz
 
 class MovieRecommender:
     def __init__(self):
@@ -31,7 +31,6 @@ class MovieRecommender:
 
     def movie_finder(self, title):
         all_titles = self.movies['title'].tolist()
-        # extractOne returns a tuple (best_match, score)
         result = process.extractOne(title, all_titles, scorer=fuzz.QRatio)
 
         if result and result[1] >= 70:  # Check if there is a result and the score is high enough
@@ -54,9 +53,8 @@ class MovieRecommender:
 
         if desired_genre:
             filtered_ids = [mid for mid in neighbour_ids if desired_genre in self.movies[self.movies['movieId'] == mid]['genres'].iloc[0]]
-            return filtered_ids[:max_results]  # Return only the top filtered results as defined by max_results
-        return neighbour_ids[:max_results]  # Return top results if no genre is specified
-
+            return filtered_ids[:max_results]  
+        return neighbour_ids[:max_results]  
 
 # Example usage
 if __name__ == "__main__":
