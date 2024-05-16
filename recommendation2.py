@@ -61,8 +61,8 @@ class MovieRecommender:
 # Example usage
 if __name__ == "__main__":
     recommender = MovieRecommender()
-    movie_id, movie_title = recommender.movie_finder("Toy Story")
-    recommendations = recommender.find_similar_movies(movie_id, desired_genre="Animation")
+    movie_id, movie_title = recommender.movie_finder("Lost Rivers")
+    recommendations = recommender.find_similar_movies(movie_id)
     print(f"Because you watched {movie_title}:")
     for id in recommendations:
         print(recommender.movies[recommender.movies['movieId'] == id]['title'].iloc[0])
