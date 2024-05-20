@@ -90,15 +90,12 @@ Our system uses K-Nearest Neighbors (KNN) with cosine similarity to find the mos
 
 The application features a cohesive design with a consistent color scheme, modern fonts, and a responsive layout ensuring accessibility across devices.
 
-![Web App Screenshot 1](https://github.com/FredSabu/Movie_Recommender/assets/130511381/8fefcb2f-0cec-4662-9827-98add059f95c)  
-*Figure 7: Screenshot of the web application showing the user interface.*
-
 ### Performance, Responsiveness, and User Interaction
 
 The application optimizes user interaction with asynchronous operations for real-time feedback and a smooth user experience.
 
 ![Web App Screenshot 2](https://github.com/FredSabu/Movie_Recommender/assets/130511381/7df55b42-42cf-4cd7-9202-883605e4a34b)  
-*Figure 8: Screenshot of the web application showing the movie recommendation results.*
+*Figure 7: Loading indicator while fetching movie recommendations for "Interstellar."*
 
 ### Integration with Backend Systems
 
@@ -122,8 +119,9 @@ Our recommender system successfully avoids personal data collection while provid
 
 This project was a collaborative effort by:
 
-- **Fred Sabu (18005389)**: Chief Architect and Developer, led the development of the front-end and the recommender system.
-- **Daniel Devis (19020322)**: Development Support Specialist, assisted in various aspects of development and testing.
-- **Mathi Kumaran (20021974)**: Data Processing Lead, handled data preprocessing and contributed to feedback and testing.
-- **Reynold Kwok (23003788)**: Evaluation Lead, conducted system evaluation and contributed to feedback and testing.
+- **Fred Sabu (18005389)**: Chief Architect and Developer, led front-end and recommender system development.
+- **Daniel Devis (19020322)**: Development Support Specialist, assisted in development, testing, and feedback.
+- **Mathi Kumaran (20021974)**: Data Processing Lead, handled preprocessing, feedback, testing, and assisted in development.
+- **Reynold Kwok (23003788)**: Evaluation Lead, conducted evaluation, feedback, testing, and assisted in development.
+
 
